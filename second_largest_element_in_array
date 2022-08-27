@@ -1,0 +1,35 @@
+public class Spartan {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] a = {12,11,8,13,9};
+		
+		System.out.print(find_second_max(a));
+				
+	}
+	
+	public static int find_second_max(int a[]) {
+		
+		int second_largest=-1;
+		int largest=0;
+		
+		for(int i=1;i<a.length;i++) {
+			if(a[i]>a[largest]) {
+				
+				second_largest=largest;
+				largest=i;
+			}
+			else if(a[i]!=a[largest]) {
+				
+				if((second_largest==-1)|| (a[i]>a[second_largest])) {
+					second_largest=i;
+					
+				}
+			}
+		}
+		
+		return a[second_largest];
+	}
+
+}
