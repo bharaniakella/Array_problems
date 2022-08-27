@@ -1,0 +1,30 @@
+public class Spartan {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] a = {10,20,30,40,10};
+		
+		System.out.print(is_array_sorted(a));
+				
+	}
+	
+	public static String is_array_sorted(int a[]) {
+		
+		int prev=0;
+		for(int i=1;i<a.length;i++) {
+			if(a[i]>=a[prev]) {
+				prev++;
+			}else {
+				break;
+			}
+		}
+		if(prev==(a.length-1)) {
+			return "yes";
+		}else {
+			return "no";
+		}
+		
+	}
+
+}
